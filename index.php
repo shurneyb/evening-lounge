@@ -3,9 +3,11 @@ session_start ();
 function loginForm() {
 	echo '
     <div id="loginform">
-    <form action="index.php" method="post">
-        <p>Please enter your name to continue:</p>
-        <label for="name">Name:</label>
+	<form action="index.php" method="post">
+		<h1 id="welcome1">WELCOME TO UNCs EVENING LOUNGE</h1>
+		<br></br>
+        <p class="enter">Enter your "screename"</p>
+        <label class="enter" for="name">Name:</label>
         <input type="text" name="name" id="name" />
         <input type="submit" name="enter" id="enter" value="Enter" />
     </form>
@@ -20,7 +22,7 @@ if (isset ( $_POST ['enter'] )) {
 		fwrite ( $fp, "<div class='msgln'><i>Please welcome " . $_SESSION ['name'] . " to the chatroom.</i><br></div>" );
 		fclose ( $fp );
 	} else {
-		echo '<span class="error">Please type in a name</span>';
+		echo '<span class="error">Enter your "screename"</span>';
 	}
 }
 
@@ -84,7 +86,7 @@ $(document).ready(function(){
 $(document).ready(function(){
 	//If user wants to end session
 	$("#exit").click(function(){
-		var exit = confirm("Leaving the chatroom is not reccomended.");
+		var exit = confirm("Leaving the chatroom is not recommended.");
 		if(exit==true){window.location = 'index.php?logout=true';}
 	});
 });

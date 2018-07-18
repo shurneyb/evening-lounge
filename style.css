@@ -3,6 +3,26 @@ body {
 	color: #222;
 	text-align: center;
 	padding: 35px;
+	background-image: url("img/lounge6.jpg");
+	background-color: rgb(134, 21, 21);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.enter{
+	font-weight: bold;
+	color: #fff;
+	padding: 3px;
+	background-color: rgba(0, 0, 0, 0.35);
+	border-radius: 4px;
+}
+
+#welcome1{
+	color: #fff;
+	padding: 3px;
+	background-color: rgba(0, 0, 0, 0.35);
+	border-radius: 4px;
 }
 
 form,p,span {
@@ -15,20 +35,22 @@ input {
 }
 
 a {
-	color: #0000FF;
+	color: #FFF;
+	font-size: 1em;
+	font-weight: bold;
+	padding: 3px 6px 3px 3px;
 	text-decoration: none;
+	transition: .05s ease-out;
 }
 
 a:hover {
-	text-decoration: underline;
+	font-size: 1.1em;
+	transition: .05s ease-out;
 }
 
 #wrapper,#loginform {
 	margin: 0 auto;
 	padding-bottom: 25px;
-	background: #EBF4FB;
-	width: 504px;
-	border: 1px solid #ACD8F0;
 }
 
 #loginform {
@@ -44,15 +66,12 @@ a:hover {
 	margin: 0 auto;
 	margin-bottom: 25px;
 	padding: 10px;
-	background: #fff;
-	height: 270px;
-	width: 430px;
-	border: 1px solid #ACD8F0;
+	background: rgba(255, 255, 255, 0.95);
+	border: 1px solid rgb(209, 172, 240);
 	overflow: auto;
 }
 
 #usermsg {
-	width: 395px;
 	border: 1px solid #ACD8F0;
 }
 
@@ -65,17 +84,50 @@ a:hover {
 }
 
 #menu {
-	padding: 12.5px 25px 12.5px 25px;
+	padding: 12.5px 25px 0px 25px;
+	height: 40px;
 }
 
 .welcome {
 	float: left;
+	color: #fff;
+	font-size: 2em;
+	padding: 3px 6px 3px 3px;
+	background-color: rgba(0, 0, 0, 0.35);
+	border-radius: 5px;
 }
 
 .logout {
 	float: right;
+	line-height: 40px;
 }
 
 .msgln {
 	margin: 0 0 2px 0;
+}
+
+@media only screen and (min-width: 600px){
+	#chatbox {
+		height: 270px;
+		width: 430px;
+	}
+	#wrapper,#loginform {
+		width: 504px;
+	}
+	#usermsg {
+		width: 395px;
+	}
+}
+
+@media only screen and (max-width: 600px){
+	#usermsg {
+		width: 100% !important;
+	}
+	#wrapper,#loginform {
+		width: 100% !important;
+	}
+	#chatbox {
+		height: 50vh !important;
+		width: 100vw !important;
+	}
 }
