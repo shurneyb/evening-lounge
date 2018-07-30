@@ -42,10 +42,10 @@ if (isset ( $_GET ['logout'] )) {
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>UNC's Evening Lounge and Chatroom</title>
-<link type="text/css" rel="stylesheet" href="style.css" />
+<link type="text/css" rel="stylesheet" href="style.php" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
+<body style=>
 	<?php
 	if (! isset ( $_SESSION ['name'] )) {
 		loginForm ();

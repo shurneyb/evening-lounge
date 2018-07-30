@@ -1,9 +1,13 @@
+<?php header("Content-type: text/css"); 
+$num = rand(1,6);
+$img_url = "img/lounge{$num}.jpg"
+?>
 body {
 	font: 12px arial;
 	color: #222;
 	text-align: center;
 	padding: 35px;
-	background-image: url("img/lounge6.jpg");
+	background-image: url(<?=$img_url?>);
 	background-color: rgb(134, 21, 21);
 	background-repeat: no-repeat;
 	background-position: center;
