@@ -67,12 +67,12 @@ a:hover {
 	margin-bottom: 25px;
 	padding: 10px;
 	background: rgba(255, 255, 255, 0.95);
-	border: 1px solid rgb(209, 172, 240);
+	border: 1px solid rgb(134, 21, 21);
 	overflow: auto;
 }
 
 #usermsg {
-	border: 1px solid #ACD8F0;
+	border: 1px solid rgb(134, 21, 21);
 }
 
 #submit {
@@ -121,7 +121,7 @@ a:hover {
 
 @media screen and (max-width: 600px){
 	#usermsg {
-		width: 100%;
+		width: 70%;
 	}
 	#wrapper,#loginform {
 		width: 100%;
@@ -131,6 +131,18 @@ a:hover {
 		width: 90%;
 	}
 	body{
+		background-image: url("img/mobile-lounge1.jpg");
+		background-size: cover;
 		padding: 5px;
+	}
+	#submitmsg {
+		background-color: rgb(134, 21, 21);
+		color: #FFF;
+		border: solid #000 1px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-weight: bold;
+		padding: 2px 5px;
 	}
 }

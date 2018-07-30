@@ -30,7 +30,7 @@ if (isset ( $_GET ['logout'] )) {
 
 	// Simple exit message
 	$fp = fopen ( "log.html", 'a' );
-	fwrite ( $fp, "<div class='msgln'><i>" . $_SESSION ['name'] . " has left the chattoom.</i><br></div>" );
+	fwrite ( $fp, "<div class='msgln'><i>" . $_SESSION ['name'] . " has left the chatroom.</i><br></div>" );
 	fclose ( $fp );
 
 	session_destroy ();
@@ -118,7 +118,7 @@ function loadLog(){
 	});
 }
 
-setInterval (loadLog, 2500);
+setInterval (loadLog, 250);
 </script>
 <?php
 	}
