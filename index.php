@@ -5,11 +5,11 @@ function loginForm() {
     <div id="loginform">
 	<form action="index.php" method="post">
 		<h1 id="welcome1">WELCOME TO UNCs EVENING LOUNGE</h1>
-		<br></br>
         <p class="enter">Enter your "screename"</p>
-        <label class="enter" for="name">Name:</label>
-        <input type="text" name="name" id="name" />
-        <input type="submit" name="enter" id="enter" value="Enter" />
+		<input type="text" name="name" id="name" />
+		<div id="button-wrapper">
+		<input type="submit" name="enter" id="enter" value="Enter the Lounge" />
+		</div>
     </form>
     </div>
     ';
@@ -28,7 +28,7 @@ if (isset ( $_POST ['enter'] )) {
 
 if (isset ( $_GET ['logout'] )) {
 
-	// Simple exit message
+	// exit message
 	$fp = fopen ( "log.html", 'a' );
 	fwrite ( $fp, "<div class='msgln'><i>" . $_SESSION ['name'] . " has left the chatroom.</i><br></div>" );
 	fclose ( $fp );
@@ -38,8 +38,7 @@ if (isset ( $_GET ['logout'] )) {
 }
 
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
 <head>
 <title>UNC's Evening Lounge and Chatroom</title>
 <link type="text/css" rel="stylesheet" href="style.css" />
@@ -53,11 +52,12 @@ if (isset ( $_GET ['logout'] )) {
 		?>
 <div id="wrapper">
 		<div id="menu">
+			<p class="logout">
+				<a id="exit" href="#">Log out</a>
+			</p>
+			<br><br>
 			<p class="welcome">
 				Good evening, <b><?php echo $_SESSION['name']; ?></b>
-			</p>
-			<p class="logout">
-				<a id="exit" href="#">Exit Chatroom</a>
 			</p>
 			<div style="clear: both"></div>
 		</div>

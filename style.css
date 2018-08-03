@@ -36,7 +36,7 @@ input {
 
 a {
 	color: #FFF;
-	font-size: 1em;
+	font-size: 1.1em;
 	font-weight: bold;
 	padding: 3px 6px 3px 3px;
 	text-decoration: none;
@@ -120,29 +120,88 @@ a:hover {
 }
 
 @media screen and (max-width: 600px){
+	input {
+		font-size: 1.6em !important;
+	}
+	body{
+		height: 92vh;
+		background-image: url("img/mobile-lounge1.jpg");
+		background-size: cover;
+		padding: 0px;
+		margin: 0px;
+	}
+	#loginform{
+		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0));
+	}
+	.enter{
+		font-weight: bold;
+		color: #fff;
+		padding: 3px;
+		background-color: rgba(0, 0, 0, 0.00);
+		border-radius: 4px;
+		font-size: 1.6em;
+	}
+	#welcome1{
+		margin: 53px 6px;
+		padding: 0px;
+		background-color: rgba(0, 0, 0, 0.00);
+		font-size: 2.5em;
+	}
+	.welcome {
+		float: left;
+		font-size: 2.2em;
+		padding: 0px;
+		margin: 0px 0px 8px 4px;
+		background-color: rgba(0, 0, 0, 0.00);
+	}
 	#usermsg {
 		width: 70%;
+	}
+	#name{
+		padding: 5px;
+	}
+	#button-wrapper{
+		display: flex;
+		justify-content: center;
+	}
+	#enter{
+		margin-top: 15px;
+		align-self: center;
+		font-weight: bold;
+		color: #fff;
+		padding: 10px  15px;
+		background-color: rgba(0, 0, 0, 0.5);
+		border-radius: 4px;
 	}
 	#wrapper,#loginform {
 		width: 100%;
 	}
+	#wrapper{
+		height: 90vh;
+		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0));
+	}
 	#chatbox {
 		height: 50vh;
 		width: 90%;
-	}
-	body{
-		background-image: url("img/mobile-lounge1.jpg");
-		background-size: cover;
-		padding: 5px;
+		font-size: 1em;
 	}
 	#submitmsg {
-		background-color: rgb(134, 21, 21);
-		color: #FFF;
-		border: solid #000 1px;
-		text-align: center;
-		text-decoration: none;
-		display: inline-block;
+		align-self: center;
 		font-weight: bold;
-		padding: 2px 5px;
+		color: #fff;
+		padding: 5px  5px;
+		background-color: rgba(0, 0, 0, 0.5);
+		border-radius: 4px;
+	}
+	#menu{
+		padding: 5px 2px;
+	}
+	#exit a{
+		padding: 0px;
+		margin: 0px;
+	}
+	.msgln{
+		font-size: 1.2em;
+		margin: 4px 0px;
 	}
 }
